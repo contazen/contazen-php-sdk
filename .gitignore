@@ -1,0 +1,213 @@
+# Composer dependencies
+/vendor/
+composer.phar
+
+# Composer lock file (uncomment if you want to ignore it for libraries)
+# composer.lock
+
+# PHP Unit
+.phpunit.result.cache
+.phpunit.cache/
+phpunit.xml
+/coverage/
+/build/
+/reports/
+
+# PHP CodeSniffer
+.phpcs-cache
+phpcs.xml
+
+# PHPStan
+.phpstan/
+phpstan.neon
+
+# PHP CS Fixer
+.php-cs-fixer.cache
+.php_cs.cache
+
+# Psalm
+.psalm/
+psalm.xml
+
+# Environment files
+.env
+.env.local
+.env.*.local
+.env.backup
+*.env
+
+# IDE and Editor files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.project
+.settings/
+.buildpath
+*.swp
+*.swo
+*~
+nbproject/
+.netbeans/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+error_log
+access_log
+/logs/
+/tmp/
+/temp/
+
+# Testing
+/tests/coverage/
+/tests/reports/
+/tests/_output/
+/tests/_support/_generated/
+*.test.php
+.phpunit/
+
+# Documentation build
+/docs/_build/
+/docs/api/
+/docs/generated/
+
+# Package builds
+*.phar
+*.zip
+*.tar.gz
+*.tgz
+
+# Node (if using any JS tools)
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Private/Local files
+/private/
+/local/
+*.local.php
+config.local.php
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+*.save
+*.tmp
+
+# Cache directories
+/.cache/
+/.sass-cache/
+/cache/
+
+# API tokens and credentials (extra safety)
+*token*.txt
+*credential*.txt
+*secret*.txt
+.credentials/
+.secrets/
+api-key.php
+api-keys.php
+
+# Database files
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+
+# Generated files (be careful with these)
+# *.pdf  # You might want to keep example PDFs
+# *.xml  # You might want to keep example XMLs
+
+# Infection PHP (mutation testing)
+infection.log
+infection-log.txt
+.infection/
+
+# PHPMD
+.phpmd.xml
+
+# Codeception
+codeception.yml
+c3.php
+
+# Laravel specific (if integrating)
+/bootstrap/cache/
+/storage/
+
+# Symfony specific (if integrating)
+/var/
+
+# WordPress specific (if integrating)
+/wp-content/uploads/
+
+# Example files with real credentials
+/examples/config.php
+/examples/.env
+/examples/credentials.php
+
+# Ignore test output
+/test-results/
+/test-output/
+
+# Don't ignore important config files
+!.gitignore
+!.gitattributes
+!.editorconfig
+!phpunit.xml.dist
+!phpcs.xml.dist
+!phpstan.neon.dist
+!psalm.xml.dist
+!.php-cs-fixer.dist.php
+!composer.lock  # Important: libraries usually DO commit composer.lock
+
+# Don't ignore example configurations
+!*.example
+!*.sample
+!*.dist
+
+# macOS
+.AppleDouble
+.LSOverride
+Icon
+.DocumentRevisions-V100
+.fseventsd
+.TemporaryItems
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db:encryptable
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+.directory
+.Trash-*
+.nfs*
