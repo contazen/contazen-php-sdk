@@ -30,10 +30,23 @@ class ClientBuilder
     }
     
     /**
+     * Set the work point ID for multi-tenant access
+     * 
+     * @param string $workPointId
+     * @return self
+     */
+    public function withWorkPointId(string $workPointId): self
+    {
+        $this->options['work_point_id'] = $workPointId;
+        return $this;
+    }
+    
+    /**
      * Set the firm ID for all requests
      * 
      * @param int $firmId
      * @return self
+     * @deprecated Use withWorkPointId() instead
      */
     public function withFirmId(int $firmId): self
     {

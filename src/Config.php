@@ -78,10 +78,21 @@ class Config
      * Get firm ID
      * 
      * @return int|null
+     * @deprecated Use getWorkPointId() instead
      */
     public function getFirmId(): ?int
     {
         return $this->options['firm_id'] ?? null;
+    }
+    
+    /**
+     * Get work point ID
+     * 
+     * @return string|null
+     */
+    public function getWorkPointId(): ?string
+    {
+        return $this->options['work_point_id'] ?? null;
     }
     
     /**

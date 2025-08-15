@@ -199,8 +199,16 @@ class HttpClient
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['Content-Type'] = 'application/json';
         
-        // Add firm_id if configured
-        if ($this->config->getFirmId() !== null) {
+        // Add work_point_id if configured (new way)
+        if ($this->config->getWorkPointId() !== null) {
+            if ($method === 'GET') {
+                $options['query']['work_point_id'] = $this->config->getWorkPointId();
+            } else {
+                $options['json']['work_point_id'] = $options['json']['work_point_id'] ?? $this->config->getWorkPointId();
+            }
+        }
+        // Add firm_id if configured (deprecated, for backwards compatibility)
+        elseif ($this->config->getFirmId() !== null) {
             if ($method === 'GET') {
                 $options['query']['firm_id'] = $this->config->getFirmId();
             } else {

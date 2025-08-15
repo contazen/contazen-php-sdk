@@ -59,7 +59,8 @@ class Client
      * 
      * Options:
      * - api_url: API base URL (default: https://api.contazen.ro/v1)
-     * - firm_id: Default firm ID for requests
+     * - work_point_id: Default work point ID for multi-tenant access (optional)
+     * - firm_id: Default firm ID for requests (deprecated, use work_point_id)
      * - timeout: Request timeout in seconds (default: 30)
      * - retry_attempts: Number of retry attempts (default: 3)
      * - retry_delay: Delay between retries in milliseconds (default: 1000)

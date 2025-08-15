@@ -226,7 +226,9 @@ class Invoices extends Resource
      */
     public function downloadPdf(string $czUid): string
     {
-        $response = $this->http->get("/invoices/{$czUid}/pdf", [], [
+        $response = $this->http->get("/invoices/{$czUid}/pdf", [
+            'mode' => 'download'
+        ], [
             'Accept' => 'application/pdf',
         ]);
         return $response->getBody();
@@ -235,14 +237,17 @@ class Invoices extends Resource
     /**
      * Get invoice PDF download URL
      * 
+     * Note: The returned URL requires Bearer authentication with your API key
+     * 
      * @param string $czUid Invoice CzUid
-     * @return string
+     * @return array Contains 'url', 'filename', and 'authentication_required' fields
      */
-    public function getPdfUrl(string $czUid): string
+    public function getPdfUrl(string $czUid): array
     {
-        $response = $this->http->get("/invoices/{$czUid}/pdf-url");
-        $data = $response->getData();
-        return $data['url'] ?? '';
+        $response = $this->http->get("/invoices/{$czUid}/pdf", [
+            'mode' => 'url'
+        ]);
+        return $response->getData();
     }
     
     /**
